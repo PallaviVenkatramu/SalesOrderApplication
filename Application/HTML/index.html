@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Sales Order Application </title>
+</head>
+<style>
+        #header{
+            text-align: center;
+            font-family: Georgia;
+            font-size: 25px;
+            padding: 15px;
+        }
+        button {
+            background-color:darkcyan;
+            color: white;
+            ruby-align: center;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 10%;
+        }
+    </style>
+<script>
+    function funValidate() {
+        debugger;
+        var uname=document.getElementById('uname').value;
+        var pass=document.getElementById('pass').value;
+
+        if(uname == "a" && pass == "a") {
+            alert("Login Success!");
+            document.getElementById('uname').value="";
+            document.getElementById('pass').value="";
+            window.location.href = "WelcomePage.html";
+        }
+        else {
+            alert("Invalid Login. Please try again!!");
+            return false;
+        }
+    }
+    </script>
+<body>
+<h1 align="center" style="margin-top:10%"> Welcome to Sales Order Application </h1> <br/> <br/>
+<div id="header">
+    <label for="uname">Username: </label>
+    <input type="text" id="uname" size="25" placeholder="Enter your login name" required> <br/> <br/>
+
+    <label for="pass">Password: </label>
+    <input type="password" id="pass" size="25" placeholder="Enter your credentials" required> <br/> <br/>
+
+    <button type="submit" onclick="funValidate()"> Login </button>
+</div>
+</body>
+</html>
